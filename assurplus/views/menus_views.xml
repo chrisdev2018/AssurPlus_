@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Top Menu-->
+        <menuitem id="first_parent" 
+            name="First Menu"
+            sequence="40" />
+
+
+    </data>
+</odoo>
