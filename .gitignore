@@ -98,7 +98,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-.~lock
+.~lock.*
 .idea/
 /site
 
