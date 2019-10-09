@@ -2,9 +2,14 @@
 <odoo>
     <data>
         <!--Top Menu-->
-        <menuitem id="first_parent" 
-            name="First Menu"
-            sequence="40" />
+        <menuitem id="assurplus_id"
+            name="Assur Plus"
+            sequence="5" />
+
+        <menuitem id="configuration_menu_id"
+            name="Configuration"
+            parent="assurplus_id"
+            sequence="5" />
 
 
     </data>

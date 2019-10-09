@@ -24,8 +24,9 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/menus_views.xml',
-        'views/first_child_views.xml'
-        
+        'views/assure.xml',
+        'views/prime.xml'
+
     ],
     'installable': True,
     'application': True,

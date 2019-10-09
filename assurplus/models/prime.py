@@ -28,10 +28,12 @@ class Prime(models.Model):
     comptant = fields.Float(
         string="Comptant",
         compute="calcul_comptant",
-        store=True
+        store=True,
+        readonly=True
     )
 
     @api.multi
     def calcul_comptant(self):
-        return True
+        for rec in self:
+            return True
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record model="ir.ui.view" id="prime_view_tree">
+        <field name="name">prime.tree</field>
+        <field name="model">assurplus.prime</field>
+        <field name="arch" type="xml">
+            <tree string="Prime Tree">
+                <field name="name"/>
+                <field name="valeur"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="prime_view_form">
+        <field name="name">prime.form</field>
+        <field name="model">assurplus.prime</field>
+        <field name="arch" type="xml">
+            <form string="Prime Form">
+                <group colsapn="2">
+                    <field name="name"/>
+                    <field name="valeur"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="prime_action">
+        <field name="name">Primes</field>
+        <field name="res_model">assurplus.prime</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="prime_menu_id"
+              name="Listes des primes"
+              parent="configuration_menu_id"
+              sequence="2"
+              action="prime_action"/>
+</odoo>
