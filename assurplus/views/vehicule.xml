@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record model="ir.ui.view" id="vehicule_view_form">
+            <field name="name">vehicule.form</field>
+            <field name="model">assurplus.vehicule</field>
+            <field name="arch" type="xml">
+                <form string="Vehicule Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="marque"/>
+                            <field name="chassis"/>
+                            <field name="puissance"/>
+                            <field name="nb_place"/>
+                        </group>
+                        <group>
+                            <field name="genre"/>
+                            <field name="usage"/>
+                            <field name="source"/>
+                            <field name="conducteur"/>
+                            <field name="zone"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="vehicule_view_tree">
+            <field name="name">vehicule.tree</field>
+            <field name="model">assurplus.vehicule</field>
+            <field name="arch" type="xml">
+                <tree string="Vehicule Tree">
+                    <field name="name"/>
+                    <field name="marque"/>
+                    <field name="chassis"/>
+                </tree>
+            </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="vehicule_action">
+            <field name="name">Véhicule</field>
+            <field name="res_model">assurplus.vehicule</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="vehicule_menu_id"
+              name="Liste des Véhicules"
+              sequence="2"
+              parent="configuration_menu_id"
+              action="vehicule_action" />
+</odoo>

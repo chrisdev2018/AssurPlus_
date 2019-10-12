@@ -2,3 +2,4 @@
 
 from . import assure
 from . import prime
+from . import vehicule

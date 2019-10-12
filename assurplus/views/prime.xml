@@ -36,6 +36,6 @@
     <menuitem id="prime_menu_id"
               name="Listes des primes"
               parent="configuration_menu_id"
-              sequence="2"
+              sequence="3"
               action="prime_action"/>
 </odoo>

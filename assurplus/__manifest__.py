@@ -25,6 +25,7 @@
         # 'security/ir.model.access.csv',
         'views/menus_views.xml',
         'views/assure.xml',
+        'views/vehicule.xml',
         'views/prime.xml'
 
     ],
