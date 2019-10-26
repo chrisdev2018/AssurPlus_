@@ -5,14 +5,10 @@ class Assure(models.Model):
     _name = "assurplus.assure"
 
     name = fields.Char(
-        string="nom",
+        string="Nom & Prénom",
         required=True
     )
-    prenom = fields.Char(
-        string="Prénom",
-        required=True
-    )
-
+    
     tel = fields.Char(
         string="Téléphone"
     )

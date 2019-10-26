@@ -24,9 +24,10 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/menus_views.xml',
-        'views/assure.xml',
-        'views/vehicule.xml',
-        'views/prime.xml'
+        'views/assure_views.xml',
+        'views/vehicule_views.xml',
+        'views/prime_views.xml',
+        'views/conditions_parti_views.xml'
 
     ],
     'installable': True,

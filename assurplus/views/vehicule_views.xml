@@ -47,7 +47,7 @@
     </record>
 
     <menuitem id="vehicule_menu_id"
-              name="Liste des Véhicules"
+              name="Véhicules"
               sequence="2"
               parent="configuration_menu_id"
               action="vehicule_action" />

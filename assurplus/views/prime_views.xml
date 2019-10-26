@@ -17,10 +17,15 @@
         <field name="model">assurplus.prime</field>
         <field name="arch" type="xml">
             <form string="Prime Form">
-                <group colsapn="2">
-                    <field name="name"/>
-                    <field name="valeur"/>
-                </group>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="valeur"/>
+                        </group>
+                        <group></group>
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>
@@ -34,7 +39,7 @@
 
 
     <menuitem id="prime_menu_id"
-              name="Listes des primes"
+              name="Primes"
               parent="configuration_menu_id"
               sequence="3"
               action="prime_action"/>

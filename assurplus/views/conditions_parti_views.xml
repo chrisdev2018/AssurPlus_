@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+    <!-- assurplus.conditions_parti form view -->
+    <record id="assurplus.conditions_parti_view_form" model="ir.ui.view">
+        <field name="name">assurplus.conditions_parti.view.form</field>
+        <field name="model">assurplus.conditions_parti</field>
+        <field name="arch" type="xml">
+            <form string="Conditions Particulieres">
+                <sheet>
+                    <group>
+                        <group>
+                            <h1><label for="name">Police N°</label></h1>
+                            <h2><field name="name"/></h2>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="avenant"/>
+                            <field name="date_effet"/>
+                            <field name="date_echeance"/>
+                            <field name="duree"/>
+                        </group>
+                        <group>
+                            <field name="vehicule_id"/>
+                            <field name="chassis"/>
+                            <field name="immat"/>
+                            <field name="assure_id"/>
+                        </group>
+                        
+                    </group>
+
+                    <notebook>
+                        <page string="Les primes">
+                           <field name="prime_lines">
+                                <tree editable="bottom">
+                                    <field name="prime_id"/>
+                                    <field name="val"/>
+                                    <field name="garantie"/>
+                                    <field name="montant"/>
+                                    <field name="reduction"/>
+                                    <field name="majoration"/>
+                                    <field name="comptant"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- assurplus.conditions_parti tree view -->
+    <record id="assurplus.conditions_parti_view_tree" model="ir.ui.view">
+        <field name="name">assurplus.conditions_parti.view.tree</field>
+        <field name="model">assurplus.conditions_parti</field>
+        <field name="arch" type="xml">
+            <tree>
+               <field name="name"/>
+                
+            </tree>
+        </field>
+    </record>
+
+    <!-- assurplus.conditions_parti action window -->
+    <record id="assurplus.conditions_parti_action" model="ir.actions.act_window">
+        <field name="name">Conditions Particulières</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">assurplus.conditions_parti</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_type">form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Cliquez sur le bouton "Créer" pour créer un nouveau formulaire
+            </p><p>
+                Ce formulaire permet d'enregistrer de nouvelles conditions particulières
+            </p>
+        </field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="conditions_parti_menu_act"
+     name="Conditions Particulières" parent="assurplus_id"
+     action="assurplus.conditions_parti_action" sequence="1"/>
+        
+    </data>
+</odoo>

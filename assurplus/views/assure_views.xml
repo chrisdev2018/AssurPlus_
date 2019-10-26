@@ -10,7 +10,6 @@
                     <sheet>
                         <group>
                             <field name="name"/>
-                            <field name="prenom"/>
                             <field name="tel"/>
                         </group>
                         <group>
@@ -29,7 +28,7 @@
             <field name="arch" type="xml">
                 <tree string="Assure Tree">
                     <field name="name"/>
-                    <field name="prenom"/>
+                    <field name="tel"/>
                     <field name="activite"/>
                 </tree>
             </field>
@@ -44,7 +43,7 @@
     </record>
 
     <menuitem id="assure_menu_id"
-              name="Liste des assurés"
+              name="Assurés"
               sequence="1"
               parent="configuration_menu_id"
               action="assure_action" />
