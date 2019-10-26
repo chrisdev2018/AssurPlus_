@@ -53,4 +53,9 @@ class ConditionsParti(models.Model):
     etat = fields.Selection(
         string='Etat',
          selection=[('open', 'Ouvert'),
-                     ('close', 'Traité'),])
+                     ('closed', 'Traité')],
+         default="open")
+    
+    @api.multi
+    def action_close(self):
+        self.etat = "closed"
