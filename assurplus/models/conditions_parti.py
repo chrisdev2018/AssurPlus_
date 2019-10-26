@@ -33,15 +33,6 @@ class ConditionsParti(models.Model):
         comodel_name='assurplus.vehicule',
         string='Véhicule',
         required="True")
-    
-
-    chassis = fields.Char(
-        string="Chassis"
-    )
-
-    immat = fields.Char(
-        string="N° Immatriculation"
-    )
 
     # assuré
     assure_id = fields.Many2one(
@@ -63,9 +54,3 @@ class ConditionsParti(models.Model):
         string='Etat',
          selection=[('open', 'Ouvert'),
                      ('close', 'Traité'),])
-    
-    
-    
-    @api.depends('date_effet', 'date_echeance')
-    def _calcul_duree(self):
-        self.duree = 100
