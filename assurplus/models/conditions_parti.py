@@ -30,17 +30,17 @@ class ConditionsParti(models.Model):
 
     # vehicule
     vehicule_id = fields.Many2one(
-        string="Véhicule",
-        comodel_namel="assurplus.vehicule",
-        required=True
-    )
+        comodel_name='assurplus.vehicule',
+        string='Véhicule',
+        required="True")
+    
 
     chassis = fields.Char(
         string="Chassis"
     )
 
     immat = fields.Char(
-        string="Immatriculation"
+        string="N° Immatriculation"
     )
 
     # assuré

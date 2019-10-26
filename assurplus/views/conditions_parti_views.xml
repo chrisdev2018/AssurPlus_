@@ -24,10 +24,10 @@
                             <field name="duree"/>
                         </group>
                         <group>
+                            <field name="assure_id"/>
                             <field name="vehicule_id"/>
                             <field name="chassis"/>
                             <field name="immat"/>
-                            <field name="assure_id"/>
                         </group>
                         
                     </group>
