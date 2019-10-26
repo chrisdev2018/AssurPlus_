@@ -6,7 +6,8 @@ class ConditionsParti(models.Model):
     _name = "assurplus.conditions_parti"
 
     name = fields.Char(
-        string="Police N°"
+        string="Police N°",
+        required=True
     )
 
     date_effet = fields.Date(
