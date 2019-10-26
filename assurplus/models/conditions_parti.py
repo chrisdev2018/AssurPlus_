@@ -59,6 +59,12 @@ class ConditionsParti(models.Model):
         inverse_name='conditions_id', 
         string='Primes')
     
+    etat = fields.Selection(
+        string='Etat',
+         selection=[('open', 'Ouvert'),
+                     ('close', 'Traité'),])
+    
+    
     
     @api.depends('date_effet', 'date_echeance')
     def _calcul_duree(self):
