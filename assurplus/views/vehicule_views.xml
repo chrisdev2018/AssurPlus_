@@ -8,18 +8,24 @@
                 <form string="Vehicule Form">
                     <sheet>
                         <group>
-                            <field name="name"/>
-                            <field name="marque"/>
-                            <field name="chassis"/>
-                            <field name="puissance"/>
-                            <field name="nb_place"/>
-                        </group>
-                        <group>
-                            <field name="genre"/>
-                            <field name="usage"/>
-                            <field name="source"/>
-                            <field name="conducteur"/>
-                            <field name="zone"/>
+                            <group>
+                                <separator string="Informations de Base"/>
+                                <br/><br/>
+                                <field name="name"/>
+                                <field name="marque"/>
+                                <field name="chassis"/>
+                                <field name="puissance"/>
+                                <field name="nb_place"/>
+                            </group>
+                            <group>
+                                <separator string="Autres Informations"/>
+                                <br/><br/>
+                                <field name="genre"/>
+                                <field name="usage"/>
+                                <field name="source"/>
+                                <field name="conducteur"/>
+                                <field name="zone"/>
+                            </group>
                         </group>
                     </sheet>
                 </form>
