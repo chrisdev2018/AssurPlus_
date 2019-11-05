@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+    <record id="assurplus_category_profiles" model="ir.module.category">
+        <field name="name">AssurPlus</field>
+        <field name="description">Categorie de groupes pour AssurPlus</field>
+        <field name="sequence">10</field>
+        <field name="visible" eval="1"/>
+    </record>
+
+    <record id="assurplus_general_profile" model="res.groups">
+        <field name="name">Gestionnaire</field>
+        <field name="category_id" ref="assurplus_category_profiles"/>
+	    <field name="users" eval="[(4, ref('base.user_root'))]"/>
+    </record>
+        
+    </data>
+</odoo>

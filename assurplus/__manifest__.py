@@ -14,7 +14,7 @@
     'author': "Christian FOMEKONG",
     'website': "https://github.com/chrisdev2018",
 
-    'category': 'Dev',
+    'category': 'AssurPlus',
     'version': '0.0.1',
 
     # any module necessary for this one to work correctly
@@ -22,7 +22,11 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        # Sécurité 
+        'security/groups.xml',   
+        'security/ir.model.access.csv',
+        
+        #Les vues
         'views/menus_views.xml',
         'views/assure_views.xml',
         'views/vehicule_views.xml',
