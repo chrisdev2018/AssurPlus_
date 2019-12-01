@@ -42,7 +42,7 @@
                                     <field name="prime_id"/>
                                     <field name="val"/>
                                     <field name="garantie"/>
-                                    <field name="montant"/>
+                                    <field name="montant_a_prendre"/>
                                     <field name="reduction"/>
                                     <field name="majoration"/>
                                     <field name="comptant"/>

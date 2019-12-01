@@ -1,0 +1,36 @@
+ 
+version: '2'
+services:
+  db:
+    image: postgres:9.5
+    networks:
+      - odoonetwork
+    volumes:
+      - "~/Workspace/projets/docker-data/data-db:/var/lib/postgresql/data"
+    environment:
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - POSTGRES_DB=postgres
+    restart: always             # run as a service
+
+  odoo12:
+    image: odoo:12
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    tty: true
+    networks:
+      - odoonetwork
+    command: -- --dev=reload
+#    command: odoo scaffold /mnt/extra-addons/test_module
+    volumes:
+       - "~/Workspace/projets/AssurPlus_:/mnt/extra-addons"
+       - "~/Workspace/projets/docker-data/data-odoo:/data/odoo"
+#      - ./etc:/etc/odoo
+    restart: always
+
+networks:
+  odoonetwork:
+
+   

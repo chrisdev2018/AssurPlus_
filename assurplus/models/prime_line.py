@@ -26,8 +26,8 @@ class PrimeLine(models.Model):
         string="Limite de garantie"
     )
 
-    montant = fields.Integer(
-        string="Montant"
+    montant_a_prendre = fields.Integer(
+        
     )
 
     reduction = fields.Float(
