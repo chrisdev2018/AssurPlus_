@@ -25,7 +25,7 @@ services:
     command: -- --dev=reload
 #    command: odoo scaffold /mnt/extra-addons/test_module
     volumes:
-       - "~/Workspace/projets/AssurPlus_:/mnt/extra-addons"
+       - "~/Workspace/projets/AssurPlus_/modules:/mnt/extra-addons"
        - "~/Workspace/projets/docker-data/data-odoo:/data/odoo"
 #      - ./etc:/etc/odoo
     restart: always
