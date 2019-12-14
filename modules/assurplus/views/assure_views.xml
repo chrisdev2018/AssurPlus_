@@ -8,6 +8,12 @@
             <field name="arch" type="xml">
                 <form string="Assure Form">
                     <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="open_conditions_parti" type="object"
+                                class="oe_stat_button" icon="fa-list">
+                                <field name="test_button" string="Contrats" widget="statinfo"></field>
+                            </button>
+                        </div>
                         <group>
                             <field name="name"/>
                             <field name="tel"/>

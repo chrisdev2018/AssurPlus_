@@ -31,8 +31,8 @@
         'views/assure_views.xml',
         'views/vehicule_views.xml',
         'views/prime_views.xml',
-        'views/conditions_parti_views.xml'
-
+        'views/conditions_parti_views.xml',
+    
     ],
     'installable': True,
     'application': True,

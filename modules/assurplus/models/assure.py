@@ -24,3 +24,11 @@ class Assure(models.Model):
     profession = fields.Char(
         string="Profession"
     )
+    
+    test_button = fields.Integer(
+        string='Contrats',
+        default=1)
+    
+    @api.multi
+    def open_conditions_parti(self):
+        raise ValidationError('Test Réussi!!!!')
