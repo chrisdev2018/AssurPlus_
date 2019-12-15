@@ -25,10 +25,23 @@ class Assure(models.Model):
         string="Profession"
     )
     
-    test_button = fields.Integer(
+    count_contrats = fields.Integer(
         string='Contrats',
-        default=1)
+        compute='get_count_contrats')
     
     @api.multi
     def open_conditions_parti(self):
-        raise ValidationError('Test Réussi!!!!')
+        return {
+            'name': ('Conditions Particulières'),
+            'domain': [('assure_id', '=', self.id)],
+            'view_type': 'form',
+            'view_id': False,
+            'res_model': 'assurplus.conditions_parti',
+            'view_mode': 'tree,form',
+            'type': 'ir.actions.act_window',
+        }
+        
+    def get_count_contrats(self):
+        count = self.env['assurplus.conditions_parti'].search_count([('assure_id', '=', self.id)])
+        self.count_contrats = count 
+    
