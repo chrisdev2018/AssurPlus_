@@ -3,7 +3,7 @@ from odoo import api, fields, models
 from datetime import datetime
 
 class ConditionsParti(models.Model):
-    _name = "assurplus.conditions_parti"
+    _name = "assurplus.contrat"
 
     name = fields.Char(
         string="Police N°",

@@ -1,18 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <data noupdate="0">
-    <!-- assurplus.conditions_parti form view -->
-    <record id="assurplus.conditions_parti_view_form" model="ir.ui.view">
-        <field name="name">assurplus.conditions_parti.view.form</field>
-        <field name="model">assurplus.conditions_parti</field>
+    <!-- assurplus.contrat form view -->
+    <record id="assurplus.contrat_view_form" model="ir.ui.view">
+        <field name="name">assurplus.contrat.view.form</field>
+        <field name="model">assurplus.contrat</field>
         <field name="arch" type="xml">
-            <form string="Conditions Particulieres">
+            <form string="Contrat">
             <header>
                 <button name="action_close" etat="open" class="oe_highlight" 
                     type="object" string="Valider"/>
                 <field name="etat" widget="statusbar" nolabel="1" statusbar_visible="open,closed"/>
             </header>
                 <sheet>
+                    <group>
+                        <group></group>
+                        <group>
+                            <separator string="Conditions Particulières"/>
+                        </group>
+                        <group></group>
+                    </group>
                     <group>
                         <group>
                             <h1><label for="name">Police N°</label></h1>
@@ -55,10 +62,10 @@
         </field>
     </record>
 
-    <!-- assurplus.conditions_parti tree view -->
-    <record id="assurplus.conditions_parti_view_tree" model="ir.ui.view">
-        <field name="name">assurplus.conditions_parti.view.tree</field>
-        <field name="model">assurplus.conditions_parti</field>
+    <!-- assurplus.contrat tree view -->
+    <record id="assurplus.contrat_view_tree" model="ir.ui.view">
+        <field name="name">assurplus.contrat.view.tree</field>
+        <field name="model">assurplus.contrat</field>
         <field name="arch" type="xml">
             <tree>
                <field name="name"/>
@@ -68,26 +75,26 @@
         </field>
     </record>
 
-    <!-- assurplus.conditions_parti action window -->
-    <record id="assurplus.conditions_parti_action" model="ir.actions.act_window">
-        <field name="name">Conditions Particulières</field>
+    <!-- assurplus.contrat action window -->
+    <record id="assurplus.contrat_action" model="ir.actions.act_window">
+        <field name="name">Contrat</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">assurplus.conditions_parti</field>
+        <field name="res_model">assurplus.contrat</field>
         <field name="view_mode">tree,form</field>
         <field name="view_type">form</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
                 Cliquez sur le bouton "Créer" pour créer un nouveau formulaire
             </p><p>
-                Ce formulaire permet d'enregistrer de nouvelles conditions particulières
+                Ce formulaire permet d'enregistrer un nouveau contrat
             </p>
         </field>
     </record>
 
     <!-- This Menu Item must have a parent and an action -->
-    <menuitem id="conditions_parti_menu_act"
-     name="Conditions Particulières" parent="assurplus_id"
-     action="assurplus.conditions_parti_action" sequence="1"/>
+    <menuitem id="contrat_menu_act"
+     name="Contrats" parent="assurplus_id"
+     action="assurplus.contrat_action" sequence="1"/>
         
     </data>
 </odoo>

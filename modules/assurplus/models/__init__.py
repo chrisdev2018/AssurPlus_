@@ -4,4 +4,4 @@ from . import assure
 from . import prime
 from . import vehicule
 from . import prime_line
-from . import conditions_parti
+from . import contrat

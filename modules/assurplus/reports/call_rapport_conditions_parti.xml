@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <report
+        id="action_report_conditions_parti"
+        model="assurplus.conditions_parti"
+        string="Conditions Particulières"
+        report_type="qweb-pdf"
+        name="assurplus.rapport_conditions_parti"
+        file="assurplus.rapport_conditions_parti"
+    />
+</odoo>

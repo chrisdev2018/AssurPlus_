@@ -3,6 +3,8 @@ from odoo import api, fields, models
 
 class Assure(models.Model):
     _name = "assurplus.assure"
+    
+    _description = "Test description"
 
     name = fields.Char(
         string="Nom & Prénom",

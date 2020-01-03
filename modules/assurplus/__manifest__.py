@@ -31,7 +31,11 @@
         'views/assure_views.xml',
         'views/vehicule_views.xml',
         'views/prime_views.xml',
-        'views/conditions_parti_views.xml',
+        'views/contrat_views.xml',
+        
+        #Les rapport
+        'reports/call_rapport_conditions_parti.xml',
+        'reports/rapport_conditions_parti.xml',
     
     ],
     'installable': True,
