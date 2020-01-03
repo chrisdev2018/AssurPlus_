@@ -3,3 +3,4 @@ assurplus_access_vehicule_wcrd,True,True,True,True,assurplus.assurplus_general_p
 assurplus_access_prime_wcrd,True,True,True,True,assurplus.assurplus_general_profile,assurplus.model_assurplus_prime
 assurplus_access_prime_line_wcrd,True,True,True,True,assurplus.assurplus_general_profile,assurplus.model_assurplus_prime_line
 assurplus_access_assure_wcrd,True,True,True,True,assurplus.assurplus_general_profile,assurplus.model_assurplus_assure
+assurplus_access_contrat_wcrd,True,True,True,True,assurplus.assurplus_general_profile,assurplus.model_assurplus_contrat
