@@ -20,6 +20,7 @@
                             <group>
                                 <separator string="Autres Informations"/>
                                 <br/><br/>
+                                <field name="categorie"/>
                                 <field name="genre"/>
                                 <field name="usage"/>
                                 <field name="source"/>
