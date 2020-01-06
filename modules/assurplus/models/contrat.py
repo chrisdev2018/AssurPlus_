@@ -21,6 +21,16 @@ class ConditionsParti(models.Model):
         string="Police N°",
         required=True
     )
+    
+    code_police = fields.Selection(
+        string='Code Police',
+        selection=[
+            ('2019', '2019'),
+            ('200', '200'),
+            ('92', '92'),
+            ('241', '241'),
+        ]
+    )
 
     date_effet = fields.Date(
         string="Date Effet"
