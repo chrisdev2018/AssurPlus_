@@ -46,8 +46,9 @@ class Vehicule(models.Model):
 
     # TODO: mettre une contrainte sql pour le name
 
-    zone = fields.Char(
-        string="Zone de circulation"
+    zone = fields.Selection(
+        string="Zone de circulation",
+        selection=[('A', 'A'), ('B', 'B'), ('C', 'C')]
     )
 
     usage = fields.Char(
