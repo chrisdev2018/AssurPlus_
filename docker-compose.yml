@@ -7,8 +7,6 @@ services:
     ports:
       - "8069:8069"
     volumes:
-#      - ~/Workspace/projets/AssurPlus_/odoo-web-data:/var/lib/odoo
-#      - ~/Workspace/projets/AssurPlus_/config:/etc/odoo
       - ~/Workspace/projets/AssurPlus_/modules:/mnt/extra-addons
     restart: always
     container_name: odoo
@@ -24,7 +22,6 @@ services:
     restart: always
     container_name: bd
 volumes:
-  odoo-web-data:
   odoo-db-data:
 
    

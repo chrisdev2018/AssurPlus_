@@ -2,6 +2,18 @@
 from odoo import api, fields, models
 from datetime import datetime
 
+list_avenant = [
+    ('new', 'Nouvelle Affaire'),
+    ('proro', 'Prorogation'),
+    ('renew', 'Renouvellement'),
+    ('renew_modif', 'Renouvellement et modification'),
+    ('modif', 'Modification'),
+    ('resil', 'Résiliation'),
+    ('annule', 'Annulation'),
+    ('trans', 'Transfert de garanties'),
+    ('change', 'Changement de catégorie')
+]
+
 class ConditionsParti(models.Model):
     _name = "assurplus.contrat"
 
@@ -24,9 +36,7 @@ class ConditionsParti(models.Model):
 
     avenant = fields.Selection(
         string="Avenant de",
-        selection=[
-            ('new', 'Nouvelle Affaire')
-        ]
+        selection=list_avenant
     )
 
     # vehicule
