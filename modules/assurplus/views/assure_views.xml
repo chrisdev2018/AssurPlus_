@@ -2,7 +2,8 @@
 
 <odoo>
 
-    <record model="ir.ui.view" id="assure_view_form">
+    <data>
+        <record model="ir.ui.view" id="assure_view_form">
             <field name="name">assure.form</field>
             <field name="model">assurplus.assure</field>
             <field name="arch" type="xml">
@@ -30,31 +31,33 @@
                     </sheet>
                 </form>
             </field>
-    </record>
+        </record>
 
-    <record model="ir.ui.view" id="assure_view_tree">
-            <field name="name">assure.tree</field>
-            <field name="model">assurplus.assure</field>
-            <field name="arch" type="xml">
-                <tree string="Assure Tree">
-                    <field name="name"/>
-                    <field name="tel"/>
-                    <field name="activite"/>
-                </tree>
-            </field>
-    </record>
+        <record model="ir.ui.view" id="assure_view_tree">
+                <field name="name">assure.tree</field>
+                <field name="model">assurplus.assure</field>
+                <field name="arch" type="xml">
+                    <tree string="Assure Tree">
+                        <field name="name"/>
+                        <field name="tel"/>
+                        <field name="activite"/>
+                    </tree>
+                </field>
+        </record>
 
 
-    <record model="ir.actions.act_window" id="assure_action">
-            <field name="name">Assurés</field>
-            <field name="res_model">assurplus.assure</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-    </record>
+        <record model="ir.actions.act_window" id="assure_action">
+                <field name="name">Assurés</field>
+                <field name="res_model">assurplus.assure</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+        </record>
 
-    <menuitem id="assure_menu_id"
+        <menuitem id="assure_menu_id"
               name="Assurés"
               sequence="1"
               parent="configuration_menu_id"
               action="assure_action" />
+    </data>
+    
 </odoo>

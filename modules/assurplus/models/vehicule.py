@@ -2,16 +2,16 @@
 from odoo import api, fields, models
 
 
-list_cat = [('O1', 'O1'), ('O2_A', 'O2/A'), ('O2_B', 'O2/B'), ('O2_C', 'O2/C'), ('O3_A', 'O3/A'),
-            ('O3_B', 'O3/B'), ('O4_A', 'O4/A'), ('O4/_', 'O4/B'), ('O4_C', 'O4/C'),
-            ('O5/A', 'O5/A'), ('O5/B', 'O5/B'), ('O6', 'O6'), ('O7', 'O7'), ('O8', 'O8'),
-            ('O9', 'O9'), ('1O', '1O')
+list_cat = [('01', '01'), ('02', '02'), ('03_A', '03/A'),
+            ('03_B', '03/B'), ('04_A', '04/A'), ('04_B', '04/B'), ('04_C', '04/C'),
+            ('05_A', '05/A'), ('05_B', '05/B'), ('06', '06'), ('07', '07'), ('08', '08'),
+            ('09', '09'), ('10', '10')
             ]
 
 
 class Vehicule(models.Model):
     _name = "assurplus.vehicule"
-
+    
     name = fields.Char(
         string="Immatriculation",
         required=True
@@ -25,14 +25,16 @@ class Vehicule(models.Model):
 
     # TODO: mettre une contrainte sql pour le name
 
-    genre = fields.Selection(
+    genre = fields.Char(
         string="Genre",
-        selection=[
-            ('tri', 'Tricycle'),
-            ('voi', 'Voiture'),
-            ('cam', 'Camion'),
-            ('mot', 'Moto')
-        ]
+        compute="_compute_categorie",
+        store=True
+    )
+    
+    usage = fields.Char(
+        string="Usage",
+        compute="_compute_categorie",
+        store=True
     )
 
     marque = fields.Char(
@@ -49,11 +51,7 @@ class Vehicule(models.Model):
     zone = fields.Selection(
         string="Zone de circulation",
         selection=[('A', 'A'), ('B', 'B'), ('C', 'C')]
-    )
-
-    usage = fields.Char(
-        string="Usage"
-    )
+    )    
 
     puissance = fields.Integer(
         string="Puissance (en CV)"
@@ -76,3 +74,10 @@ class Vehicule(models.Model):
         string="Conducteur habituel",
         comodel_name="assurplus.assure"
     )
+               
+        
+    @api.depends('categorie')
+    def _compute_categorie(self):
+        self.genre = 'ok'
+        self.usage = 'ok'
+        

@@ -32,6 +32,7 @@
         'views/vehicule_views.xml',
         'views/prime_views.xml',
         'views/contrat_views.xml',
+        'views/usage_views.xml',
         
         #Les rapport
         'reports/call_rapport_conditions_parti.xml',

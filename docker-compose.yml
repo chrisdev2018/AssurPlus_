@@ -4,10 +4,14 @@ services:
     image: odoo:12
     depends_on:
       - db
+      - wdb
     ports:
       - "8069:8069"
     volumes:
       - ~/Workspace/projets/AssurPlus_/modules:/mnt/extra-addons
+    environment:
+      WDB_SOCKET_SERVER: wdb
+      WDB_NO_BROWSER_AUTO_OPEN: 1
     restart: always
     container_name: odoo
   db:
@@ -21,6 +25,11 @@ services:
       - ~/Workspace/projets/AssurPlus_/odoo-db-data:/var/lib/postgresql/data/pgdata
     restart: always
     container_name: bd
+  wdb:
+    image: kozea/wdb
+    ports:
+      - "1984:1984"
+    container_name: wdb
 volumes:
   odoo-db-data:
 

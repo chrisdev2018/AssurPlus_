@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- asssurplus.usage tree view -->
+        <record id="assurplus.usage_view_tree" model="ir.ui.view">
+            <field name="name">assurplus.usage.view.tree</field>
+            <field name="model">assurplus.usage</field>
+            <field name="arch" type="xml">
+                <tree string="Usage" editable="top">
+                    <field name="code"/>  
+                    <field name="usage"/>                  
+                </tree>
+            </field>
+        </record>
+
+        <!-- assurplus.usage form view -->
+        <record id="model_name_view_form" model="ir.ui.view">
+            <field name="name">assurplus.usage.view.form</field>
+            <field name="model">assurplus.usage</field>
+            <field name="arch" type="xml">
+                <form string="Usage">
+                    <sheet>
+                        <group>
+                            <field name="code"/>  
+                            <field name="usage"/> 
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- assurplus.usage action window -->
+        <record id="assurplus.usage_action" model="ir.actions.act_window">
+            <field name="name">Usage</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">assurplus.usage</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="usage_menu_act"
+        name="Usages" parent="configuration_menu_id"
+        action="assurplus.usage_action" sequence="1"/>
+        
+    </data>
+</odoo>
