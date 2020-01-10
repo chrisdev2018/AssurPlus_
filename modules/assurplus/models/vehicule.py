@@ -2,10 +2,9 @@
 from odoo import api, fields, models
 
 
-list_cat = [('01', '01'), ('02', '02'), ('03_A', '03/A'),
-            ('03_B', '03/B'), ('04_A', '04/A'), ('04_B', '04/B'), ('04_C', '04/C'),
-            ('05_A', '05/A'), ('05_B', '05/B'), ('06', '06'), ('07', '07'), ('08', '08'),
-            ('09', '09'), ('10', '10')
+list_cat = [('01', '01'), ('02', '02'), ('03', '03'), ('04_A', '04/A'), ('04_B', '04/B'),
+            ('04_C', '04/C'), ('05_A', '05/A'), ('05_B', '05/B'), ('06', '06'), ('07', '07'),
+            ('08', '08'), ('09', '09'), ('10', '10')
             ]
 
 
@@ -26,16 +25,15 @@ class Vehicule(models.Model):
     # TODO: mettre une contrainte sql pour le name
 
     genre = fields.Char(
-        string="Genre",
-        compute="_compute_categorie",
-        store=True
+        string="Genre"
     )
     
-    usage = fields.Char(
-        string="Usage",
-        compute="_compute_categorie",
-        store=True
+    usage = fields.Many2one(
+        comodel_name='assurplus.usage',
+        string='Usage',
+        domain="[('code', '=', categorie)]"
     )
+    
 
     marque = fields.Char(
         string="Marque"
@@ -74,10 +72,4 @@ class Vehicule(models.Model):
         string="Conducteur habituel",
         comodel_name="assurplus.assure"
     )
-               
-        
-    @api.depends('categorie')
-    def _compute_categorie(self):
-        self.genre = 'ok'
-        self.usage = 'ok'
-        
+            
