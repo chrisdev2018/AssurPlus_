@@ -5,4 +5,4 @@ from . import prime
 from . import vehicule
 from . import prime_line
 from . import contrat
-from . import usage
+from . import genre
