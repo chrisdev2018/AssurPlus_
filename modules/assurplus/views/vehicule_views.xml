@@ -24,7 +24,6 @@
                                 <field name="genre"/>
                                 <field name="usage"/>
                                 <field name="source"/>
-                                <field name="conducteur"/>
                                 <field name="zone"/>
                             </group>
                         </group>

@@ -24,13 +24,14 @@ class Vehicule(models.Model):
 
     # TODO: mettre une contrainte sql pour le name
 
-    genre = fields.Char(
-        string="Genre"
+    usage = fields.Char(
+        string="Usage",
+        readonly=True
     )
     
-    usage = fields.Many2one(
-        comodel_name='assurplus.usage',
-        string='Usage',
+    genre = fields.Many2one(
+        comodel_name='assurplus.genre',
+        string='Genre',
         domain="[('code', '=', categorie)]"
     )
     
@@ -67,9 +68,11 @@ class Vehicule(models.Model):
     nb_place = fields.Integer(
         string="Nombre de places"
     )
-
-    conducteur = fields.Many2one(
-        string="Conducteur habituel",
-        comodel_name="assurplus.assure"
-    )
-            
+    
+    @api.onchange('categorie')
+    def _onchange_categorie(self):
+        for rec in self:
+            if rec.categorie:
+                rec.usage = "CAT-" + rec.categorie.replace('_', '/')
+            else:
+                rec.usage = ""
