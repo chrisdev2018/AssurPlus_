@@ -40,6 +40,7 @@ class ConditionsParti(models.Model):
         string="Date Echéance"
     )
 
+    #TODO: calculer automatiquement la durée sur la base des dates de debut et fin
     duree = fields.Integer(
         string="Durée"
     )

@@ -9,7 +9,5 @@ class Prime(models.Model):
         required = True
     )
     
-    valeur = fields.Integer(string='Valeur')
-    
 
 
