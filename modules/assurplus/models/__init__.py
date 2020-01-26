@@ -6,3 +6,4 @@ from . import vehicule
 from . import prime_line
 from . import contrat
 from . import genre
+from . import conducteur

@@ -65,6 +65,11 @@ class ConditionsParti(models.Model):
     prenom = fields.Char(
         string="Prénom"
     )
+
+    conducteur = fields.Many2one(
+        string="Conducteur habituel",
+        comodel_name="assurplus.conducteur"
+    )
     
     prime_lines = fields.One2many(
         comodel_name='assurplus.prime_line', 
